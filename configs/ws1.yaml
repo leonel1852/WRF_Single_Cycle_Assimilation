@@ -1,0 +1,21 @@
+# configs/ws1.yaml
+# WS-1: Ntemp sweep — single obs, all 30 truth members, fixed alpha_s=2
+experiment: WS-1
+
+paths:
+  prepared: /path/to/state_ensemble.npz   # <- change this
+  outdir:   /path/to/output/ws1/          # <- change this
+
+state:
+  var_idx: {qg: 0, qr: 1, qs: 2, T: 3, P: 4, u: 5, v: 6, w: 7}
+
+obs:
+  loc: {x: 0, y: 0, z: 0}   # <- update after running obs_explorer_ws2.ipynb
+  sigma_dbz: 5.0             # obs error STD in dBZ (squared to variance internally)
+
+da:
+  ntemp_sweep: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  alpha_s: 2.0
+  loc_scales: [5, 5, 5]     # localization length scales [x, y, z] in grid points
+
+experiment_tag: WS1_Ntemp_sweep
