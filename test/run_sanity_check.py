@@ -91,7 +91,7 @@ def run_sanity_check(cfg, truth_member, ix, iy, iz):
     infl_ratio  = R_tilde / R0_scalar
     ntemp_atenkf = _solve_ntemp(infl_ratio, alpha_s=1.0)
 
-    # ── header ────────────────────────────────────────────────────────
+    # header
     sep = "─" * 64
     print(f"\n{sep}")
     print(f"  SANITY CHECK — truth member {truth_member}  "
@@ -108,7 +108,7 @@ def run_sanity_check(cfg, truth_member, ix, iy, iz):
           f"(steps needed to reach R_tilde at step 1)")
     print()
 
-    # ── per-method results ─────────────────────────────────────────────
+    #results per meethod
     print(f"  {'Method':<12}  {'xa_mean':>9}  {'xa_spread':>9}  "
           f"{'d_post':>9}  {'|d| reduc%':>10}  notes")
     print(f"  {'─'*12}  {'─'*9}  {'─'*9}  {'─'*9}  {'─'*10}")
