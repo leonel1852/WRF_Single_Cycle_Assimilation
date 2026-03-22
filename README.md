@@ -16,6 +16,7 @@ tempering (TEnKF).
 │   │   └── run_experiment.py        # Unified runner for all WS experiments
 │   ├── extract_3d_subset.py         # Extract WRF ensemble subsets to .npz
 │   └── fortran/                     # Fortran LETKF source + Makefile
+|       └── common_da.f90            # observation operator (e.g. reflectivity) 
 ├── configs/
 │   ├── template.yaml                # Full reference template — start here
 │   └── build_3D_section.yaml        # Data extraction config (Notebook 1)
